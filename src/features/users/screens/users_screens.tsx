@@ -111,16 +111,16 @@ export default function UsersScreen() {
                     }
                     renderItem={({ item }) => (
                         <UserItem
-  user={item}
-  onPress={() => {
-    router.push({
-      pathname: '/users/[id]',
-      params: {
-        id: item.id.toString(),
-      },
-    });
-  }}
-/>
+                            user={item}
+                            onPress={() => {
+                                router.push({
+                                    pathname: '/users/[id]',
+                                    params: {
+                                        id: item.id.toString(),
+                                    },
+                                });
+                            }}
+                        />
                     )}
                 />
             </View>

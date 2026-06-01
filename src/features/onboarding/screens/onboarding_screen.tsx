@@ -27,7 +27,7 @@ export default function OnboardingScreen() {
 
       <Pressable
         style={styles.button}
-        onPress={() => router.replace('/users')}>
+        onPress={() => router.replace('/login')}>
         <Text style={styles.buttonText}>
           Get Started
         </Text>
