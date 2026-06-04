@@ -11,7 +11,7 @@ import TodoItem from '../components/todo_item';
 
 
 import { useTodo } from '../hooks/useTodo';
-import { styles } from '../syles/todo_style';
+import { styles } from '../styles/todo_style';
 
 export default function TodoScreen() {
   const todo = useTodo();

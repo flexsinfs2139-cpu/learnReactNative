@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native';
 
-import { styles } from '../syles/todo_style';
+import { styles } from '../styles/todo_style';
 import { Todo } from '../types/todo_types';
 
 interface Props {

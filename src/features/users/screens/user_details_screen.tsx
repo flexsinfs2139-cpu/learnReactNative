@@ -35,6 +35,14 @@ export default function UserDetailsScreen() {
 
   const user = userDetails.user;
 
+  if (!user) {
+    return (
+      <AppErrorView
+        message="User details not found"
+      />
+    );
+  }
+
   return (
     <AppScreen>
       <View style={styles.container}>

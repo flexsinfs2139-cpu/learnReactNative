@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import { styles } from '../syles/todo_style';
+import { styles } from '../styles/todo_style';
 
 interface Props {
   value: string;
