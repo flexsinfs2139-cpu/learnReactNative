@@ -1,19 +1,24 @@
 import { useMemo, useState } from 'react';
 
 import {
-    FlatList,
-    RefreshControl,
-    StyleSheet,
-    Text,
-    TextInput,
-    View
+  FlatList,
+  RefreshControl,
+  StyleSheet,
+  Text,
+  TextInput,
+  View
 } from 'react-native';
 
 import {
-    AppErrorView,
-    AppLoader,
-    AppScreen,
+  AppErrorView,
+  AppLoader,
+  AppScreen,
 } from '@/shared/widgets';
+
+import {
+  getToken,
+  removeToken,
+} from '@/core/storage/storage';
 
 import { router } from 'expo-router';
 
@@ -24,6 +29,25 @@ export default function UsersScreen() {
     const users = useUsers();
 
     const [search, setSearch] = useState('');
+
+    useEffect(() => {
+    async function checkToken() {
+      const token = await getToken();
+
+      console.log(
+        'TOKEN:',
+        token,
+      );
+    }
+
+    checkToken();
+  }, []);
+
+  async function logout() {
+    await removeToken();
+
+    router.replace('/login');
+  }
 
     const filteredUsers = useMemo(() => {
         if (!search.trim()) {
