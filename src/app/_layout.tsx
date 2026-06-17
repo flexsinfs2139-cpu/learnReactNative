@@ -1,17 +1,11 @@
 import { Stack } from 'expo-router';
-import { Provider as PaperProvider } from 'react-native-paper';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { AppQueryProvider } from '@/core/providers/query_provider';
 
 export default function RootLayout() {
   return (
-    <SafeAreaProvider>
-      <PaperProvider>
-        <Stack
-          screenOptions={{
-            headerShown: false,
-          }}
-        />
-      </PaperProvider>
-    </SafeAreaProvider>
+    <AppQueryProvider>
+      <Stack />
+    </AppQueryProvider>
   );
 }

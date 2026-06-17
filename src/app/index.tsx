@@ -1,5 +1,5 @@
-import OnboardingScreen from '@/features/onboarding/screens/onboarding_screen';
+import UsersScreen from '../features/users/screens/user_screen';
 
-export default function Index() {
-  return <OnboardingScreen />;
+export default function HomeScreen() {
+  return <UsersScreen />;
 }

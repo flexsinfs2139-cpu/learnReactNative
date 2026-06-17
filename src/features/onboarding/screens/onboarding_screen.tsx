@@ -1,4 +1,3 @@
-import { router } from 'expo-router';
 import {
   Pressable,
   Text,
@@ -27,7 +26,7 @@ export default function OnboardingScreen() {
 
       <Pressable
         style={styles.button}
-        onPress={() => router.replace('/login')}>
+        onPress={()=>{}}>
         <Text style={styles.buttonText}>
           Get Started
         </Text>
