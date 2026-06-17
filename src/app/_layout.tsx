@@ -5,7 +5,12 @@ import { AppQueryProvider } from '@/core/providers/query_provider';
 export default function RootLayout() {
   return (
     <AppQueryProvider>
-      <Stack />
+      <Stack
+        screenOptions={{
+          headerShadowVisible: false,
+          headerTitleAlign: 'center',
+        }}
+      />
     </AppQueryProvider>
   );
 }
